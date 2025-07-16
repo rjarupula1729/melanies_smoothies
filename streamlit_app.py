@@ -42,5 +42,8 @@ if time_to_insert:
 
 
 import requests
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response)
+try:
+    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon", timeout = 10)
+    st.text(smoothiefroot_response)
+except requests.exceptions.RequestException as e:
+    st.error(f"API call failed: {e}")
