@@ -42,5 +42,5 @@ if time_to_insert:
 
 
 import requests
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon", timeout = 10)
+smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 st.text(smoothiefroot_response)
